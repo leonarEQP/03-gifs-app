@@ -17,10 +17,12 @@ export class SearchBoxComponent {
   public tagInput!: ElementRef<HTMLInputElement>;
 
   constructor(private gifsService: GifsService) {}
+
   searchTag() {
     const newTag = this.tagInput.nativeElement.value;
-    this.gifsService.searchTag(newTag);
-    this.tagInput.nativeElement.value = '';
 
+    this.gifsService.searchTag(newTag);
+
+    this.tagInput.nativeElement.value = '';
   }
 }
